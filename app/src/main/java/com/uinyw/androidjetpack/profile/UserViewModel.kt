@@ -1,11 +1,13 @@
 package com.uinyw.androidjetpack.profile
 
 import androidx.lifecycle.ViewModel
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 
+@HiltViewModel
 class UserViewModel: ViewModel() {
 
     private val _user = MutableStateFlow(UserUIState("John", "Doe", "jdoe@gmail.com", "1"))
